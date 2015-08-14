@@ -1,0 +1,42 @@
+<%= form_for(@team) do |f| %>
+  <% if @team.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@team.errors.count, "error") %> prohibited this team from being saved:</h2>
+
+      <ul>
+      <% @team.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Название %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :Информация %><br />
+    <%= f.text_area :info, size: "60x12" %>
+  </div>
+  <div class="field">
+    <%= f.label :Фото %><br />
+    <%= f.text_field :image_url %>
+  </div>
+
+  <div class="field">    
+    <%= f.radio_button(:group, "1-ая группа") %>
+    <%= f.label(:group, "1-ая группа") %>
+    <%= f.radio_button(:group, "2-ая группа") %>
+    <%= f.label(:group, "2-ая группа") %>
+    <%= f.radio_button(:group, "3-ая группа") %>
+    <%= f.label(:group, "3-ая группа") %>  
+    <br />
+
+  </div>
+
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,10 @@
+<% @team.each do |team|%>
+	<%= team.name %><!-- , <%= team.info %> -->
+	<%= link_to 'Показать', team %>
+	<%= link_to 'Редактировать', edit_team_path(team) %>
+	<%= link_to 'Удалить', team, confirm: 'Вы уверенны?', method: :delete %><br/>
+<% end%>
+
+<%= link_to 'Добавить команду', new_team_path %>
+
+	

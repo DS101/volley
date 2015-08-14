@@ -1,0 +1,48 @@
+<!-- # <%= @team.name %>, <%= @team.info %> 
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @team.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @team.info %>
+</p>
+
+<p>
+  <b>Image url:</b>
+  <%= @team.image_url %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_team_path(@team) %> |
+<%= link_to 'Back', teams_path %> -->
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Название:</b>
+  <%= @team.name %>
+</p>
+
+<p>
+  <b>Информация:</b>
+  <%= @team.info %>
+</p>
+
+<p>
+  <b>Image url:</b>
+  <%= @team.image_url %>
+</p>
+<p>
+  <b>Группа:</b>
+  <%= @team.group %>
+</p>
+
+
+
+
+<%= link_to 'Edit', edit_team_path(@team) %> |
+<%= link_to 'Back', teams_path %>

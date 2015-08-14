@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150807063438) do
+ActiveRecord::Schema.define(version: 20150814065148) do
 
   create_table "matches", force: :cascade do |t|
     t.integer  "home_team_id"
@@ -33,6 +33,10 @@ ActiveRecord::Schema.define(version: 20150807063438) do
     t.integer  "points"
     t.integer  "sets_win"
     t.integer  "sets_lost"
+    t.string   "image_url"
+    t.string   "group"
   end
+
+  add_index "teams", ["name"], name: "index_teams_on_name", unique: true
 
 end
