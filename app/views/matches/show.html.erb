@@ -1,0 +1,5 @@
+<p>
+  <b>Название:</b>  
+  <%= Team.find_by_id(@match.home_team_id).name %> - <%= Team.find_by_id(@match.away_team_id).name %>
+</p>
+

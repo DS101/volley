@@ -12,12 +12,10 @@ class TeamsController < ApplicationController
 		@team = Team.new
 	end
 
-	 def edit
+	def edit
     @team = Team.find(params[:id])
   end
-
-  # POST /teams
-  # POST /teams.json
+  
   def create
     @team = Team.new(team_params)
 
@@ -55,6 +53,8 @@ class TeamsController < ApplicationController
       format.json { head :no_content }
     end
 	end
+
+  
 
 	private
 
